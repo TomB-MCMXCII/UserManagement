@@ -69,7 +69,7 @@ public class UserServiceTests
         // Arrange
         using var dbContext = CreateDbContext();
         var publisherMock = new Mock<IMessagePublisher>();
-        var loggerMock = new Mock<Microsoft.Extensions.Logging.ILogger<UserService>>();
+        var loggerMock = new Mock<ILogger<UserService>>();
 
         var user = new User
         {
