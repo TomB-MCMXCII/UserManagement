@@ -45,7 +45,7 @@ tests/
 
 ### Key Design Decisions
 
-- **The solution is intentionally kept within a single API project to avoid unnecessary complexity for the scope of this assignment.
+- **The solution is intentionally kept within a single API project to avoid unnecessary complexity for the scope of this assignment.**
 - **Thin controllers** – business logic is implemented in services
 - **DTO separation** – API contracts are separate from domain entities
 - **Dependency injection** – services are registered through ASP.NET Core DI
@@ -90,7 +90,7 @@ If the schema changes in the future, create a new migration with:
 
 ```bash
 dotnet ef migrations add <MigrationName> --project UserManagement.Api --startup-project UserManagement.Api
-
+```
 ---
 
 ## Running the Project
