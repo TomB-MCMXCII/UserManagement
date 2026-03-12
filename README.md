@@ -45,6 +45,7 @@ tests/
 
 ### Key Design Decisions
 
+- **The solution is intentionally kept within a single API project to avoid unnecessary complexity for the scope of this assignment.
 - **Thin controllers** – business logic is implemented in services
 - **DTO separation** – API contracts are separate from domain entities
 - **Dependency injection** – services are registered through ASP.NET Core DI
@@ -79,6 +80,17 @@ volumes:
   postgres_data:
 ```
 
+## Migrations
+
+Entity Framework Core migrations are included in the project.
+
+The application applies pending migrations automatically on startup via `Database.Migrate()`.
+
+If the schema changes in the future, create a new migration with:
+
+```bash
+dotnet ef migrations add <MigrationName> --project UserManagement.Api --startup-project UserManagement.Api
+
 ---
 
 ## Running the Project
@@ -91,13 +103,7 @@ From the solution root:
 docker compose up -d
 ```
 
-### 2. Apply database migrations
-
-```
-dotnet ef database update --project src/UserManagement.Api --startup-project src/UserManagement.Api
-```
-
-### 3. Run the API
+### 2. Run the API
 
 ```
 dotnet run --project src/UserManagement.Api
