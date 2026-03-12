@@ -106,7 +106,7 @@ docker compose up -d
 ### 2. Run the API
 
 ```
-dotnet run --project src/UserManagement.Api
+dotnet run --project UserManagement.Api
 ```
 
 ---
