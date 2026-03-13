@@ -163,7 +163,7 @@ Request body example:
 
 ## Example Requests
 
-Replace <port>.
+Replace the port number with the value displayed in the console when the API starts.
 
 ### Create user
 
