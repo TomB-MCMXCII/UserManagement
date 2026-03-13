@@ -161,6 +161,30 @@ Request body example:
 }
 ```
 
+## Example Requests
+
+Replace <port>.
+
+### Create user
+
+```bash
+curl -X POST http://localhost:<port>/api/users \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username": "jdoe",
+    "email": "jdoe@example.com",
+    "firstName": "John",
+    "lastName": "Doe",
+    "dateOfBirth": "1990-05-15T00:00:00"
+  }'
+```
+
+### Get user by Id
+
+```bash
+curl http://localhost:<port>/api/users/1
+```
+
 ---
 
 ## Message Publishing
